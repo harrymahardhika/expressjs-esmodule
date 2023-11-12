@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Fiction",
+    "description": "Imaginative or made-up stories that are not based on real events."
+  },
+  {
+    "name": "Science Fiction",
+    "description": "Speculative fiction that often involves futuristic technology, space exploration, and extraterrestrial life."
+  },
+  {
+    "name": "Mystery",
+    "description": "Stories focused on solving a crime, often involving a detective or amateur sleuth."
+  },
+  {
+    "name": "Fantasy",
+    "description": "Genre that uses magic and other supernatural phenomena as primary elements of plot, theme, and/or setting."
+  },
+  {
+    "name": "Romance",
+    "description": "Novels focused on romantic love relationships."
+  },
+  {
+    "name": "Historical Fiction",
+    "description": "Fiction set in the past, often with historical events, figures, or settings."
+  },
+  {
+    "name": "Non-Fiction",
+    "description": "Books based on real events, facts, and information."
+  },
+  {
+    "name": "Biography",
+    "description": "An account of a person's life written by someone else."
+  },
+  {
+    "name": "Self-Help",
+    "description": "Books focused on personal development and self-improvement."
+  },
+  {
+    "name": "Science",
+    "description": "Books that explore scientific concepts and discoveries."
+  }
+]

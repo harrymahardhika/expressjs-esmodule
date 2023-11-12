@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Penguin Random House",
+    "location": "New York, USA"
+  },
+  {
+    "name": "HarperCollins",
+    "location": "New York, USA"
+  },
+  {
+    "name": "Simon & Schuster",
+    "location": "New York, USA"
+  },
+  {
+    "name": "Hachette Book Group",
+    "location": "Paris, France"
+  },
+  {
+    "name": "Macmillan Publishers",
+    "location": "London, UK"
+  },
+  {
+    "name": "Oxford University Press",
+    "location": "Oxford, UK"
+  },
+  {
+    "name": "Wiley",
+    "location": "Hoboken, USA"
+  },
+  {
+    "name": "Pearson",
+    "location": "London, UK"
+  },
+  {
+    "name": "Random House",
+    "location": "New York, USA"
+  },
+  {
+    "name": "Scholastic Corporation",
+    "location": "New York, USA"
+  },
+  {
+    "name": "Bloomsbury Publishing",
+    "location": "London, UK"
+  },
+  {
+    "name": "Penguin Books",
+    "location": "London, UK"
+  },
+  {
+    "name": "Harlequin Enterprises",
+    "location": "Toronto, Canada"
+  },
+  {
+    "name": "National Geographic Society",
+    "location": "Washington, D.C., USA"
+  },
+  {
+    "name": "MIT Press",
+    "location": "Cambridge, USA"
+  },
+  {
+    "name": "Cambridge University Press",
+    "location": "Cambridge, UK"
+  },
+  {
+    "name": "Faber and Faber",
+    "location": "London, UK"
+  },
+  {
+    "name": "Pantheon Books",
+    "location": "New York, USA"
+  },
+  {
+    "name": "Vintage Books",
+    "location": "New York, USA"
+  },
+  {
+    "name": "Little, Brown and Company",
+    "location": "New York, USA"
+  }
+]
