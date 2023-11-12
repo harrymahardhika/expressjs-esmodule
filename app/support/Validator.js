@@ -1,4 +1,5 @@
 import { validationResult } from 'express-validator'
+
 class Validator {
   rules = []
 

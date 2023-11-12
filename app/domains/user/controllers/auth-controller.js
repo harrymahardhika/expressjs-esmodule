@@ -9,7 +9,7 @@ const router = Router()
 router.post('/', AuthValidator.validate(), async (req, res) => {
   const { email, password } = req.body
   const user = await User.findOne({
-    where: { email: email }
+    where: { email }
   })
 
   if (!user) {
@@ -24,8 +24,8 @@ router.post('/', AuthValidator.validate(), async (req, res) => {
   }
 
   const token = randomString.generate()
-  await Token.create({ user_id: user.id, token: token })
-  res.json({ token: token })
+  await Token.create({ user_id: user.id, token })
+  res.json({ token })
 })
 
 export default router

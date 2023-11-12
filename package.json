@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon",
     "route:list": "node ./app/console/route-list.js",
-    "format": "node_modules/.bin/prettier -w -l app config database"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "keywords": [],
   "author": "",
@@ -26,6 +29,11 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.2.0",
+    "eslint": "^8.53.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "nodemon": "^3.0.1",
     "prettier": "^3.0.3",
     "prettier-plugin-organize-imports": "^3.2.4"
