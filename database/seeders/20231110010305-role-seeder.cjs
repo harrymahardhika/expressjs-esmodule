@@ -1,7 +1,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface) {
-    const { roles } = await import('../../app/domains/user/permission.js')
+    const roles = (await import('../../app/domains/user/permission.js')).role
     const insertRole = []
 
     Object.keys(roles).forEach((key) => {

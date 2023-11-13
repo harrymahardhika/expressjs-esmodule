@@ -16,28 +16,26 @@ module.exports = {
 
     const { permissionAssignment } = await import('../../app/domains/user/permission.js')
 
-    const permissionRole = []
-
-    for (const role in permissionAssignment) {
+    Object.keys(permissionAssignment).forEach(async (role) => {
       const roleId = await queryInterface.rawSelect('roles', { where: { name: role } }, [
         'id'
       ])
 
-      for (const permission of permissionAssignment[role]) {
+      permissionAssignment[role].forEach(async (permission) => {
         const permissionId = await queryInterface.rawSelect(
           'permissions',
           { where: { name: permission } },
           ['id']
         )
 
-        permissionRole.push({
-          role_id: roleId,
-          permission_id: permissionId
-        })
-      }
-    }
-
-    await queryInterface.bulkInsert('permission_role', permissionRole)
+        await queryInterface.bulkInsert('permission_role', [
+          {
+            role_id: roleId,
+            permission_id: permissionId
+          }
+        ])
+      })
+    })
   },
 
   async down(queryInterface) {
