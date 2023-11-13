@@ -1,21 +1,20 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up(queryInterface, Sequelize) {
+  async up(queryInterface) {
     const permissions = (await import('../../app/domains/user/permission.js')).permission
     const insertPermissions = []
 
-    for (const key in permissions) {
+    Object.keys(permissions).forEach((key) => {
       insertPermissions.push({
         name: permissions[key],
         created_at: new Date(),
         updated_at: new Date()
       })
-    }
+    })
 
     await queryInterface.bulkInsert('permissions', insertPermissions)
 
-    const permissionAssignment = (await import('../../app/domains/user/permission.js'))
-      .permissionAssignment
+    const { permissionAssignment } = await import('../../app/domains/user/permission.js')
 
     const permissionRole = []
 
@@ -41,7 +40,7 @@ module.exports = {
     await queryInterface.bulkInsert('permission_role', permissionRole)
   },
 
-  async down(queryInterface, Sequelize) {
+  async down(queryInterface) {
     await queryInterface.bulkDelete('permission_role', null, {})
     await queryInterface.bulkDelete('permissions', null, {})
   }

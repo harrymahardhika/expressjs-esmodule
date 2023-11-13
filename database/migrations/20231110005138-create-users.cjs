@@ -12,9 +12,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: {
-            tableName: 'roles'
-          },
+          model: { tableName: 'roles' },
           key: 'id'
         }
       },
@@ -41,7 +39,7 @@ module.exports = {
     })
   },
 
-  async down(queryInterface, Sequelize) {
+  async down(queryInterface) {
     await queryInterface.dropTable('users')
   }
 }

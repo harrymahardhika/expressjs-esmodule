@@ -3,7 +3,7 @@ const path = require('path')
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up(queryInterface, Sequelize) {
+  async up(queryInterface) {
     const filePath = path.resolve(__dirname, '../../resources/data/genres.json')
     const genres = JSON.parse(fs.readFileSync(filePath, 'utf8'))
 
@@ -17,7 +17,7 @@ module.exports = {
     await queryInterface.bulkInsert('genres', insert)
   },
 
-  async down(queryInterface, Sequelize) {
+  async down(queryInterface) {
     await queryInterface.bulkDelete('genres', null, {})
   }
 }

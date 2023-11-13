@@ -2,7 +2,7 @@ const { faker } = require('@faker-js/faker')
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up(queryInterface, Sequelize) {
+  async up(queryInterface) {
     const insert = []
     for (let i = 0; i < 20; i++) {
       insert.push({
@@ -15,7 +15,7 @@ module.exports = {
     await queryInterface.bulkInsert('authors', insert)
   },
 
-  async down(queryInterface, Sequelize) {
+  async down(queryInterface) {
     await queryInterface.bulkDelete('authors', null, {})
   }
 }

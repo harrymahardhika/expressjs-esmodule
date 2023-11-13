@@ -6,9 +6,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: {
-            tableName: 'permissions'
-          },
+          model: { tableName: 'permissions' },
           key: 'id'
         }
       },
@@ -16,16 +14,14 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: {
-            tableName: 'roles'
-          },
+          model: { tableName: 'roles' },
           key: 'id'
         }
       }
     })
   },
 
-  async down(queryInterface, Sequelize) {
+  async down(queryInterface) {
     await queryInterface.dropTable('permission_role')
   }
 }

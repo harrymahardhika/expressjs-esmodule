@@ -2,7 +2,7 @@ const { faker } = require('@faker-js/faker')
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up(queryInterface, Sequelize) {
+  async up(queryInterface) {
     const publishers = await queryInterface.sequelize.query('SELECT * FROM publishers', {
       type: queryInterface.sequelize.QueryTypes.SELECT
     })
@@ -48,7 +48,7 @@ module.exports = {
     await queryInterface.bulkInsert('book_genre', bookGenres)
   },
 
-  async down(queryInterface, Sequelize) {
+  async down(queryInterface) {
     await queryInterface.bulkDelete('book_genre', null, {})
     await queryInterface.bulkDelete('books', null, {})
   }

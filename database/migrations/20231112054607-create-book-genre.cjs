@@ -6,9 +6,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: {
-            tableName: 'books'
-          },
+          model: { tableName: 'books' },
           key: 'id'
         }
       },
@@ -16,16 +14,14 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: {
-            tableName: 'genres'
-          },
+          model: { tableName: 'genres' },
           key: 'id'
         }
       }
     })
   },
 
-  async down(queryInterface, Sequelize) {
+  async down(queryInterface) {
     await queryInterface.dropTable('book_genre')
   }
 }

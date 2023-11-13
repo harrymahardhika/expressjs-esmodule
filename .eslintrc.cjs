@@ -23,7 +23,9 @@ module.exports = {
     'comma-dangle': ['off', 'never'],
     'consistent-return': ['off', 'never'],
     'import/extensions': ['off', 'never'],
+    'import/no-extraneous-dependencies': ['off', 'never'],
     'object-curly-newline': ['off', 'never'],
+    'no-plusplus': ['off', 'never'],
     semi: ['error', 'never']
   }
 }
